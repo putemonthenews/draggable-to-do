@@ -28,7 +28,7 @@
       <div class="card" data-todo-name="todo">
         <div class="card-header">
           <h2>Задача</h2>
-          <button id="open-modal">Add</button>
+          <button id="open-modal">Добавить</button>
         </div>
         <ul id="todo-list-container">
           <!-- Todo list will be rendered from JavaScript -->
@@ -74,14 +74,14 @@
         <div class="content">
           <form>
             <div class="form-group">
-              <label for="title">Title</label>
+              <label for="title">Название</label>
               <input
                 required
                 minlength="3"
                 type="text"
                 id="title"
                 name="title"
-                placeholder="Title..."
+                placeholder="Название..."
               />
               <p class="error" id="title-error">Требуется название.</p>
             </div>
@@ -93,10 +93,10 @@
                 id="desc"
                 cols="30"
                 rows="5"
-                placeholder="Todo description.."
+                placeholder="Описание.."
                 value=""
               ></textarea>
-              <p class="error" id="desc-error">Description is required</p>
+              <p class="error" id="desc-error">Требуется описание</p>
             </div>
             <div class="form-group">
               <label for="remainingTime">Время</label>
@@ -110,8 +110,8 @@
               <p class="error" id="desc-error">Description is required</p>
             </div>
             <div class="form-control">
-              <button type="submit" id="btn-add">Add</button>
-              <button id="btn-close">Close</button>
+              <button type="submit" id="btn-add">Добавить</button>
+              <button id="btn-close">Закрыть</button>
             </div>
           </form>
         </div>
