@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/png" sizes="32x32" href="./favicon.ico" />
     <link rel="stylesheet" href="./style.css" />
-    <title>Составление задач по категориям</title>
+    <title>Todo.app</title>
   </head>
 
   <body>
     <header>
       <nav>
-        <span>Составление задач по категориям</span>
+        <span>todo.app</span>
         <span class="toggle-theme">Выбрать тему</span>
         <div class="themes disable-pointer">
           <div class="theme"></div>
@@ -28,7 +28,7 @@
       <div class="card" data-todo-name="todo">
         <div class="card-header">
           <h2>Задача</h2>
-          <button id="open-modal">Добавить</button>
+          <button id="open-modal">Add</button>
         </div>
         <ul id="todo-list-container">
           <!-- Todo list will be rendered from JavaScript -->
@@ -42,7 +42,7 @@
           <!-- In Progress list will be rendered from JavaScript -->
         </ul>
       </div>
-      <div class="card" data-todo-name="done">
+      <div class="card completeCard" data-todo-name="done">
         <div class="card-header">
           <h2>Выполнено</h2>
         </div>
@@ -58,7 +58,7 @@
           <!-- Incomplete list will be rendered from JavaScript -->
         </ul>
       </div>
-      <div class="card" data-todo-name="trash">
+      <div class="card garbageCanCard" data-todo-name="trash">
         <div class="card-header">
           <h2>Корзина</h2>
           <button id="clean-trash">Очистить</button>
@@ -74,14 +74,15 @@
         <div class="content">
           <form>
             <div class="form-group">
-              <label for="title">Название</label>
+              <label for="title">Title</label>
               <input
                 required
                 minlength="3"
+                maxlength="25"
                 type="text"
                 id="title"
                 name="title"
-                placeholder="Название..."
+                placeholder="Title..."
               />
               <p class="error" id="title-error">Требуется название.</p>
             </div>
@@ -89,14 +90,15 @@
               <label for="desc">Описание</label>
               <textarea
                 minlength="5"
+                maxlength="100"
                 name="desc"
                 id="desc"
                 cols="30"
                 rows="5"
-                placeholder="Описание.."
+                placeholder="Todo description.."
                 value=""
               ></textarea>
-              <p class="error" id="desc-error">Требуется описание</p>
+              <p class="error" id="desc-error">Description is required</p>
             </div>
             <div class="form-group">
               <label for="remainingTime">Время</label>
@@ -107,15 +109,53 @@
                 <input type="number" placeholder="00 сек" min="0" max="60"  class="timer__input timer__seconds">
                 
               </div>
-              <p class="error" id="desc-error">Требуется описание</p>
+              <p class="error" id="desc-error">Description is required</p>
             </div>
             <div class="form-control">
-              <button type="submit" id="btn-add">Добавить</button>
-              <button id="btn-close">Закрыть</button>
+              <button type="submit" id="btn-add">Add</button>
+              <button id="btn-close">Close</button>
             </div>
           </form>
         </div>
       </div>
+
+
+      <!-- <div class="modalEdit">
+        <div class="content">
+          <form>
+            <div class="form-group">
+              <label for="titleEdit">Title</label>
+              <input
+                required
+                minlength="3"
+                type="text"
+                id="titleEdit"
+                name="titleEdit"
+                placeholder="Title..."
+              />
+              <p class="error" id="title-errorEdit">Требуется название.</p>
+            </div>
+            <div class="form-group">
+              <label for="desc"></label>
+              <textarea
+                minlength="5"
+                name="descEdit"
+                id="descEdit"
+                cols="30"
+                rows="5"
+                placeholder="Todo description.."
+                value=""
+              ></textarea>
+              <p class="error" id="desc-errorEdit">Description is required</p>
+            </div>
+            
+            <div class="form-control">
+              <button type="submit" id="btn-edit">Edit</button>
+              <button class="btn-close-edit">Close</button>
+            </div>
+          </form>
+        </div>
+      </div> -->
     </main>
   </body>
   <script src="./app.js"></script>
