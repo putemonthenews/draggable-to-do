@@ -453,7 +453,7 @@ addBtn.addEventListener("click", (e) => {
   const minutes = parseInt(todoMinutes.value.trim())
   const seconds = parseInt(todoSeconds.value.trim())
   if (!title) {
-    titleError.innerText = "Title is required"
+    titleError.innerText = "Требуется название"
     titleError.classList.add("show")
     return
   }
@@ -465,7 +465,7 @@ addBtn.addEventListener("click", (e) => {
   }
 
   if (!desc) {
-    descError.innerText = "Description is required"
+    descError.innerText = "Требуется описание"
     descError.classList.add("show")
     return
   }
